@@ -1,0 +1,52 @@
+{
+	"name": "pictau",
+	"description": "Base Starter Theme",
+	"keywords": [
+		"WordPress",
+		"Theme",
+		"Starter"
+	],
+	"homepage": "https://github.com/Alecaddd/awps",
+	"license": "GPL-3.0",
+	"version": "4.0.0",
+	"authors": [
+		{
+			"name": "Alessandro Castellani",
+			"email": "me@alecaddd.com",
+			"homepage": "https://alecaddd.com",
+			"role": "Developer"
+		}
+	],
+	"require": {
+		"vlucas/phpdotenv": "^5.2"
+	},
+	"require-dev": {
+		"roave/security-advisories": "dev-master",
+		"php-parallel-lint/php-parallel-lint": "^1.2",
+		"phpcompatibility/phpcompatibility-wp": "^2.1",
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
+		"wp-coding-standards/wpcs": "^2.3",
+		"wptrt/wpthemereview": "^0.2.1"
+	},
+	"autoload": {
+		"psr-4": {
+			"Awps\\": "./inc"
+		},
+		"files": [
+			"./inc/Helpers.php"
+		]
+	},
+	"scripts": {
+		"test": [
+			"@phpcs",
+			"@parallel-lint"
+		],
+		"phpcs": "phpcs",
+		"parallel-lint": "parallel-lint --blame --exclude vendor/ ."
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	}
+}
