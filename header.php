@@ -38,7 +38,7 @@
 					<div class="col-xs-12 col-sm-4">
 
 						<div class="site-branding">
-							<h1 class="site-title">
+							<h1 class="site-title text-orange-300">
 								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 									<?php svg( 'wordpress' ); ?>
 									<?php bloginfo( 'name' ); ?>

@@ -19,7 +19,7 @@ mix.setPublicPath('./assets/dist');
 mix.browserSync({
 	open: 'external',
 	host: process.env.npm_config_host,
-	injectChanges: true,
+	injectChanges: false,
 	watch: true,
 	proxy: {
 		target: process.env.npm_config_host,
@@ -29,6 +29,7 @@ mix.browserSync({
 		cert: './certs/tailwind-react-wp.dev+2.pem',
 	},
 	port: 5001,
+	files: ['./**/*.*'],
 });
 
 // Compile assets.

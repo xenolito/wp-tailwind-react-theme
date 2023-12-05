@@ -1,7 +1,7 @@
 {
-	"name": "awps",
-	"version": "4.1.1",
-	"description": "WordPress base Theme based @ Alecaddd WordPress Starter Theme",
+	"name": "pictau-wp-theme-from-awps",
+	"version": "5.0.1",
+	"description": "WordPress base Theme based from Alecaddd WordPress Starter Theme",
 	"main": "index.js",
 	"prettier": "@wordpress/prettier-config",
 	"config": {
