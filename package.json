@@ -1,5 +1,5 @@
 {
-	"name": "pictau-wp-theme-from-awps",
+	"name": "pictau-theme",
 	"version": "5.0.1",
 	"description": "WordPress base Theme based from Alecaddd WordPress Starter Theme",
 	"main": "index.js",
@@ -19,16 +19,12 @@
 		"lint": "eslint \"./**/*.js\"",
 		"makecerts": "mkdir $npm_package_config_certsFolder && cd $npm_package_config_certsFolder && mkcert $npm_package_config_host *.$npm_package_config_host localhost"
 	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/Alecaddd/awps.git"
-	},
 	"keywords": [
 		"wordpress",
 		"theme",
 		"starter"
 	],
-	"author": "Alessandro Castellani <me@alecaddd.com> (https://alecaddd.com)",
+	"author": "Oscar Rey from me@alecaddd.com",
 	"license": "GPL-3.0",
 	"bugs": {
 		"url": "https://github.com/Alecaddd/awps/issues"
@@ -43,7 +39,7 @@
 		"autoprefixer": "^10.4.16",
 		"browser-sync": "^2.29.3",
 		"browser-sync-webpack-plugin": "^2.3.0",
-		"jquery": "^3.6.0",
+		"jquery": "^3.7.1",
 		"laravel-mix": "^6.0.19",
 		"normalize-scss": "^7.0.1",
 		"postcss": "^8.4.32",
@@ -51,5 +47,8 @@
 		"sass": "^1.32.13",
 		"sass-loader": "^11.1.1",
 		"tailwindcss": "^3.3.5"
+	},
+	"dependencies": {
+		"console-signature": "^1.5.0"
 	}
 }
