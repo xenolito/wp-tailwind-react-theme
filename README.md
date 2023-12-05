@@ -10,11 +10,12 @@ This theme relies on **NPM** and **Composer** in order to load dependencies and 
 
 * Install [Composer](https://getcomposer.org/)
 * Install [Node](https://nodejs.org/)
+* Install [mkcert](https://www.npmjs.com/package/mkcert). You need mkcert installed globally to create the ssl certs for browsersync to work (mac OS)
 
 
 ## Installation
 
-* Move the `.env.example` to your WordPress root directory, rename it as `.env`, and setup your website variables
+* Move the `.env.example` to your WordPress root directory, rename it as `.env`, and setup your website variables (make sure to set the `WP_HOME` var as insecure `http` in order to ssl certs working properly)
 * Move the `wp-config.sample.php` to your WordPress root directory and rename it as `wp-config.php`, to replace the default one
 * Open a Terminal window on the location of the theme folder
 * Execute `composer install`
@@ -26,8 +27,9 @@ This theme relies on **NPM** and **Composer** in order to load dependencies and 
 AWPS uses [Laravel Mix](https://laravel.com/docs/5.6/mix) for assets management. Check the official documentation for advanced options
 
 * Edit the `webpack.mix.js` in the root directory of your theme to set your localhost URL and customize your assets
-* `npm run watch` to start browserSync with LiveReload and proxy to your custom URL
-* `npm run dev` to quickly compile and bundle all the assets without watching
+* Edit the `package.json` "config" entry to match your local host and define your ssl certs folder
+* `npm makecerts` to create the ssl certs for browsersync with LiveReload
+* `npm run dev` to start browserSync with LiveReload and proxy to your custom URL
 * `npm run prod` to compile the assets for production
 
 

@@ -84,3 +84,7 @@ Rails
 
 # VSCode Workspace Settings #
 .vscode
+
+
+# your ssl certs folder #
+certs

@@ -23,6 +23,7 @@ class Menus
         */
         register_nav_menus(array(
             'primary' => esc_html__( 'Primary', 'awps' ),
+            'social' => esc_html__( 'Social menu', 'awps' ),
         ));
     }
 }

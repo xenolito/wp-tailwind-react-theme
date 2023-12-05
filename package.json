@@ -4,15 +4,20 @@
 	"description": "WordPress base Theme based @ Alecaddd WordPress Starter Theme",
 	"main": "index.js",
 	"prettier": "@wordpress/prettier-config",
+	"config": {
+		"host": "tailwind-react-wp.dev",
+		"certsFolder": "certs"
+	},
 	"scripts": {
-		"dev": "mix",
 		"development": "mix",
 		"watch": "mix watch",
+		"dev": "npm run watch --host=$npm_package_config_host",
 		"watch-poll": "mix watch -- --watch-options-poll=1000",
 		"hot": "mix watch --hot",
 		"prod": "mix --production",
 		"production": "mix --production",
-		"lint": "eslint \"./**/*.js\""
+		"lint": "eslint \"./**/*.js\"",
+		"makecerts": "mkdir $npm_package_config_certsFolder && cd $npm_package_config_certsFolder && mkcert $npm_package_config_host *.$npm_package_config_host localhost"
 	},
 	"repository": {
 		"type": "git",
@@ -36,6 +41,8 @@
 		"@wordpress/eslint-plugin": "^9.0.5",
 		"@wordpress/prettier-config": "^1.0.4",
 		"autoprefixer": "^10.4.16",
+		"browser-sync": "^2.29.3",
+		"browser-sync-webpack-plugin": "^2.3.0",
 		"jquery": "^3.6.0",
 		"laravel-mix": "^6.0.19",
 		"normalize-scss": "^7.0.1",

@@ -15,19 +15,19 @@ use Awps\Api\Customizer;
 /**
  * Customizer class
  */
-class Footer 
+class Footer
 {
 	/**
 	 * register default hooks and actions for WordPress
 	 * @return
 	 */
-	public function register( $wp_customize ) 
+	public function register( $wp_customize )
 	{
 		$wp_customize->add_section( 'awps_footer_section' , array(
 			'title' => __( 'Footer', 'awps' ),
 			'description' => __( 'Customize the Footer' ),
 			'priority' => 162
-		) ); 
+		) );
 
 		$wp_customize->add_setting( 'awps_footer_background_color' , array(
 			'default' => '#ffffff',
@@ -35,7 +35,7 @@ class Footer
 		) );
 
 		$wp_customize->add_setting( 'awps_footer_copy_text' , array(
-			'default' => 'Proudly powered by AWPS',
+			'default' => 'Proudly powered by PICTAU',
 			'transport' => 'postMessage', // or refresh if you want the entire page to reload
 		) );
 

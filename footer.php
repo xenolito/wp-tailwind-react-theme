@@ -26,16 +26,9 @@
 				printf(
 					'<a %s href="%s">%s</a>',
 					is_customize_preview() ? 'id="awps-footer-copy-control"' : '',
-					esc_url( __( 'https://github.com/Alecaddd/awps', 'awps' ) ),
+					esc_url( __( 'https://pictau.com', 'awps' ) ),
 					esc_html( Awps\Api\Customizer::text( 'awps_footer_copy_text' ) )
 				);
-			?>
-			<span class="sep"> | </span>
-			<?php
-				/* translators: %1: Theme name. */
-
-				/* translators: %2: Author name. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'awps' ), 'AWPS', '<a href="http://alecaddd.com/" rel="designer">Alecaddd</a>' );
 			?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

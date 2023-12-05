@@ -16,6 +16,21 @@ mix.autoload({
 
 mix.setPublicPath('./assets/dist');
 
+mix.browserSync({
+	open: 'external',
+	host: process.env.npm_config_host,
+	injectChanges: true,
+	watch: true,
+	proxy: {
+		target: process.env.npm_config_host,
+	},
+	https: {
+		key: './certs/tailwind-react-wp.dev+2-key.pem',
+		cert: './certs/tailwind-react-wp.dev+2.pem',
+	},
+	port: 5001,
+});
+
 // Compile assets.
 mix.js('assets/src/scripts/app.js', 'assets/dist/js')
 	.js('assets/src/scripts/admin.js', 'assets/dist/js')
